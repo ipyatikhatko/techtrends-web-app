@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Chivo_Mono } from "next/font/google";
+import { Chivo } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/modules/common/providers/theme";
 import Header from "@/modules/common/components/Header";
 
-const chivoMono = Chivo_Mono({ weight: ['400', '500', '600', '700'], subsets: ['latin'] })
+const chivoMono = Chivo({ weight: ['400', '500', '600', '700'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "TechTrends Ukraine",
@@ -28,7 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header/>
-          <main className="min-h-[100dvh] pt-[56px] flex flex-col">
+          <main className="h-[100dvh] pt-[56px] flex flex-col">
             {children}
           </main>
         </ThemeProvider>
